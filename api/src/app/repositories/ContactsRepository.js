@@ -18,7 +18,6 @@ class ContactsRepository {
       FROM contacts
       LEFT JOIN categories ON categories.id = contacts.category_id
       WHERE contacts.id = $1
-
     `, [id]);
     return rows;
   }
